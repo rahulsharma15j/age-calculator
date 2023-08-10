@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --primary: #02aab0;
+  --primary-light: rgba(0, 121, 101, 0.9);
+  --light: #ffffff;
+  --dark: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(14, 174, 87, 1) 0%,
+    rgba(12, 116, 117, 1) 90%
+  );
+}
+
+.wrapper {
+  padding: 1rem;
+  width: 400px;
+  border-radius: 5px;
+  margin-bottom: 8rem;
+  background-color: var(--light);
+}
+
+.age-calculator {
+  width: 100%;
+}
+
+.age-calculator h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.age-calculator .input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-field input {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+}
+
+.input-field input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background-position: calc(100% - 5px);
+  background-size: 25px;
+  cursor: pointer;
+}
+
+.input-field button {
+  margin-bottom: 1rem;
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.5s;
+}
+
+.input-field button:hover {
+  background-color: var(--primary-light);
+}
+
+.result {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.result span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
